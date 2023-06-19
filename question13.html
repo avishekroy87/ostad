@@ -1,0 +1,40 @@
+<!--
+13.DOM Query Selector:
+    a. Create a webpage with multiple paragraphs containing different classes and IDs.
+    b. Implement a JavaScript function that selects all paragraphs with a specific class and changes their text color to red.
+-->
+
+<html>
+    <head>
+        <title>
+            Dom select
+        </title>
+    </head>
+    <body>
+        <div id="first" class="first">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        </div>
+
+        <div id="second" class="third">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        </div>
+
+        <div id="third" class="first">
+            But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects,
+        </div>
+
+        <div id="fourth" class="third">
+            On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those 
+        </div>
+        <script>
+            function changeBg(){
+                const paraList = document.querySelectorAll(".first");
+                for (let i = 0; i < paraList.length; i++) {
+                    paraList[i].style.backgroundColor = "red";
+                }
+            }
+               
+            changeBg();
+        </script>
+    </body>
+</html>

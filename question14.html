@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Axios Get</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <h3>
+            Check the GET response
+        </h3>
+        <div id="result">
+
+        </div>
+        <script>
+            axios({
+                method: 'get',
+                url: 'https://jsonplaceholder.typicode.com/todos/1',
+            })
+            .then(function (response) {
+                var title = response.data.title
+                document.getElementById("result").innerHTML = title
+                // console.log(response.data.title);
+            })
+            .catch(function (error) {
+                console.error(error);
+            })
+        </script>
+    </body>
+</html>

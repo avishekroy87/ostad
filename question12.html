@@ -1,0 +1,23 @@
+<!--
+    12.DOM Change Attribute Value:
+    a. Create a webpage with an image element (<img>) that has an initial source URL.
+
+    b. Implement a JavaScript function that changes the source URL of the image element when a button is clicked. Use a different image URL of your choice.
+-->
+<html>
+    <head>
+        <title>
+            Q12
+        </title>
+        <body>
+            <img src="./sad.jpg" id="first" height="100" width="100"/>
+            <button onclick="imageChange()">Change</button>
+        </body>
+        <script>
+            function imageChange(){
+                var img1 = document.getElementById('first');
+                img1.src = 'smile.png'
+            }
+        </script>
+    </head>
+</html>

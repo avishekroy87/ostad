@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Axios Get</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <h3>
+            Check the Create response, the data created as follows
+        </h3>
+        <div id="result">
+
+        </div>
+        <script>
+            axios.post('https://reqres.in/api/users', {
+            data : { "name": "John Doe", "email": "johndoe@example.com" }
+            })
+            .then(function (response) {
+            console.log(response);
+            document.getElementById("result").innerHTML = response.data.data.name
+            })
+            .catch(function (error) {
+            console.log(error);
+            });
+        </script>
+    </body>
+</html>
